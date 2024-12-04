@@ -1,6 +1,6 @@
 {
   "name": "remove-thai-danglings",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Remove Thai non-base characters at the beginning of text",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
