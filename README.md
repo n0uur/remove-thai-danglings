@@ -8,7 +8,9 @@ Remove Thai non-base characters at the beginning of text.
 
 ```js
 import removeThaiDangling from "remove-thai-danglings";
-
+                    ี
+                   |
+                   V
 removeThaiDangling("ีกินข้าวเหนียวไก่ย่าง"); // => "กินข้าวเหนียวไก่ย่าง"
 ```
 
