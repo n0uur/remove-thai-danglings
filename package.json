@@ -9,7 +9,6 @@
     "dist"
   ],
   "scripts": {
-    "poc": "tsx ./src/poc.ts",
     "build": "tsup",
     "test": "jest"
   },

@@ -22,10 +22,9 @@ function removeThaiDangling(text: string): string {
   const zeroWidthChars = "\u200b\u200c\u200d";
 
   const danglingChars = `${thaiAboveVowels}${thaiBelowVowels}${thaiTonemarks}\u0e3a\u0e4c\u0e4d\u0e4e${zeroWidthChars}`;
-  const reRemoveDanglings = new RegExp(`^[${danglingChars}]+`); // remove dangling characters at the beginning
-  const reRemoveZeroWidthChars = new RegExp(`${zeroWidthChars}+$`); // remove zero width characters at the end
-
-  return text.replace(reRemoveDanglings, "").replace(reRemoveZeroWidthChars, "");
+  return text
+    .replace(new RegExp(`^[${danglingChars}]+`), "") // remove dangling characters at the beginning
+    .replace(new RegExp(`[${zeroWidthChars}]+$`), ""); // remove zero width characters at the end
 }
 
 export default removeThaiDangling;
